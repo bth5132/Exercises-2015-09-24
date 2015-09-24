@@ -19,16 +19,32 @@
  * 
  * You entered 2 grades. The average is 72.5
  */
-
 import java.util.Scanner;
 
 public class Grades {
   public static void main(String[] args) {
     Scanner keyboard = new Scanner(System.in);
-    System.out.println("Enter a grade. Enter -1 to exit.");
-    int grade = keyboard.nextInt();
     
-    System.out.println("Your grade is " + grade + ".");
+    // One grade
+    int grade;
+    // The number of grades
+    int count = 0;
+    // Total of the grades
+    float total = 0;
+    
+    for (;;) {
+        System.out.println("Enter a grade: ");
+        grade = keyboard.nextInt();
+        if (grade == -1) {
+            break;
+        }
+        total += grade;
+        count++;
+    }
+    
+    System.out.println("count: " + count);
+    System.out.println("total: " + total);
+    System.out.println("average: " + total / count);
     }    
   }
 
