@@ -20,9 +20,16 @@
  * You entered 2 grades. The average is 72.5
  */
 
+import java.util.Scanner;
+
 public class Grades {
   public static void main(String[] args) {
+    Scanner keyboard = new Scanner(System.in);
+    System.out.println("Enter a grade. Enter -1 to exit.");
+    int grade = keyboard.nextInt();
     
+    System.out.println("Your grade is " + grade + ".");
+    }    
   }
 
-}
+
